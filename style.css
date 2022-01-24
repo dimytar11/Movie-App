@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 12px;
+  min-height: 100vh;
+  gap: 8px;
+  font-size: 26px;
+  text-align: center;
+  color: rgb(231, 240, 248);
+}
+
+.movie {
+  width: 300px;
+  height: 500px;
+  text-align: justify;
+  background-color: rgb(174, 181, 184);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+  position: relative;
+}
+
+.movie img {
+    height: 400px;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 130px;
+  background-color: rgb(174, 181, 184);
+  font-size: 16px;
+  text-align: center;
+  color: rgb(10, 30, 48);
+}
+
+.movie-info > h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:8px;
+  
+}
+
+.movie-info > div {
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: rgb(174, 181, 184);
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(14, 17, 19);
+  margin-bottom: 8px;
+  /* align-self: flex-end; */
+}
+
+.movie-info > div.green {
+  color: green;
+}
+.movie-info > div.orange {
+  color: orange;
+}
+
+.movie-info > div.red {
+  color: red;
+}
+
+.poster-img {
+  width: 300px;
+  border-radius: 3px 3px 0 0;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(174, 181, 184);
+  padding: 1rem;
+  max-height: 100%;
+  min-height: 50%;
+  font-size: 14px;
+  color: rgb(6, 21, 34);
+  /* transform: translateY(100%);
+  visibility: hidden;
+  transition: 0.3s; */
+}
+
+.movie:hover .overview {
+  visibility: visible;
+}
+
+#tags{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.tag{
+    color:white;
+    padding: 10px 20px;
+    background-color: orange;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: rgb(255, 94, 0);
+}
